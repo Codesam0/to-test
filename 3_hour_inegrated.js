@@ -57,28 +57,22 @@ function display(todo, desc, id) {
         li.innerHTML = `${temp}`;
         todone.append(li);
         ul.remove(li);
-        // li.classList.add("sam");
-        // console.log(li.classList)
-        arr.push(li); // Append to the array
-
+        li.classList.add("sam");
+        arr.push(li); 
+        refresh_done(arr)
         
     }
-}
-   
+
 
 function refresh_done(arr) {
-    for (let j = 0; j < arr.length; j++) {
-        
+       console.log(arr)
+        var ul = document.createElement("ul");
+        var li = document.createElement("li");
+        for (let j = 0; j < arr.length; j++) {
+            if(arr[j].has)
+            li.innerText = arr[j];
+            ul.append(li);
+            todone.append(ul);
+        }
     }
-    axios.post('https://crudcrud.com/api/e3b9fb55cf36405787411053f81bba10/appointment', obj)
-    .then(req => console.log("Post successful"))
-    .catch(err => console.log(err));
-        // var ul = document.createElement("ul");
-        // var li = document.createElement("li");
-        // for (let j = 0; j < arr.length; j++) {
-            // console.log(arr[j].classList)
-        //     li.innerText = arr[j];
-        //     ul.append(li);
-        //     todone.append(ul);
-        // }
-    }
+}

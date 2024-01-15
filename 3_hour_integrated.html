@@ -1,0 +1,39 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = <device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <script src = "https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <style>
+        .small-li{
+            font-size: 17px;
+        }
+
+        #done ul{
+                 padding-top: 3px;
+        }
+
+        #to-do ul {
+                 /* margin: ; */
+                  padding-bottom: 3px;
+                }
+
+    </style>
+    <div>
+   <label id="label1" class="form-label">Todo Name  </label> 
+   <input type="text" id="todo" class="form-control-sm" >
+   <label id="label2" class="form-label" >Description</label> 
+   <input type="text" id="desc" class="form-control-sm">
+    <button class = "btn btn-success" id="btn">Add Item</button><br><br>
+    <h4 id="to-do" class="font"><u>To Do Remaining</u></h4><br><br>
+    <h4 id="done" class="font"><u>To Do Done</u></h4></div>
+    <script src="3_hour_inegrated.js"></script>
+</body>
+</html>
